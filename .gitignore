@@ -153,5 +153,5 @@ build_tests/
 yap_testing
 html/img/img/
 
-blogicum/static
-/test
+/blogicum/static
+/tests
