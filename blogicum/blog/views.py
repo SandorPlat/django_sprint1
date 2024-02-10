@@ -56,7 +56,9 @@ def index(request):
 def post_detail(request, id):
     try:
         template = 'blog/detail.html'
-        context = {'post': posts_dict[id]}
+        for key in posts_dict:
+            if posts_dict[key]['id'] == id:
+                context = {'post': posts_dict[key]}
     except KeyError:
         raise Http404()
     return render(request, template, context)
